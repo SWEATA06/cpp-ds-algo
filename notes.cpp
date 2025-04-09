@@ -29,3 +29,7 @@ Example:
 
 vector<int> vec(5);
 iota(vec.begin(), vec.end(), 1);  // Assigns values 1, 2, 3, 4, 5 to vec
+//
+vector<int> vec = {1, 3, 5, 7, 9};
+  auto it = lower_bound(vec.begin(), vec.end(), 6);
+  cout << *it;//ans:7
