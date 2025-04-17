@@ -1,0 +1,22 @@
+class Solution {
+  public:
+    vector<int> firstNegInt(vector<int>& arr, int k) {
+        // write code here
+        int n=arr.size();
+        int i=0,j=0;
+        vector<int> l;
+        vector<int> m;
+        while(j<n){
+            if(arr[j]<0) l.push_back(arr[j]);
+            if(j-i+1<k) j++;
+            else if(j-i+1==k){
+                if(l.size()==0) m.push_back(0);
+                else m.push_back(l[0]);
+            if(!l.empty() && arr[i]==l[0]) l.erase(l.begin());
+            i++;
+                j++;
+
+            }
+        }return m;
+    }
+};
